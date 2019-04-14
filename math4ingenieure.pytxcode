@@ -250,20 +250,19 @@ a*a
 from random import choice, randint
 a = randint(1,5)
 b = randint(1,5)
-c = choice([2,3,5])
-=>PYTHONTEX#py#default#default#90#i#####444#
+=>PYTHONTEX#py#default#default#90#i#####443#
 a
-=>PYTHONTEX#py#default#default#91#i#####444#
+=>PYTHONTEX#py#default#default#91#i#####443#
 2*a
-=>PYTHONTEX#py#default#default#92#code#####459#
+=>PYTHONTEX#py#default#default#92#code#####458#
 from random import choice
 c = choice(['\sin','\cos','\ttan'])
 d = choice(['+1','-1',''])
-=>PYTHONTEX#py#default#default#93#i#####478#
+=>PYTHONTEX#py#default#default#93#i#####477#
 c
-=>PYTHONTEX#py#default#default#94#i#####478#
+=>PYTHONTEX#py#default#default#94#i#####477#
 d
-=>PYTHONTEX#py#default#default#95#code#####497#
+=>PYTHONTEX#py#default#default#95#code#####496#
 from random import choice, randint
 a = randint(1,5)
 b = randint(1,5)
@@ -275,27 +274,27 @@ g = randint(1,5)
 h = choice(['+','-'])
 i = choice(['+','-'])
 j = choice(['+','-'])
-=>PYTHONTEX#py#default#default#96#i#####524#
+=>PYTHONTEX#py#default#default#96#i#####523#
 a
-=>PYTHONTEX#py#default#default#97#i#####524#
+=>PYTHONTEX#py#default#default#97#i#####523#
 b
-=>PYTHONTEX#py#default#default#98#i#####524#
+=>PYTHONTEX#py#default#default#98#i#####523#
 h
-=>PYTHONTEX#py#default#default#99#i#####524#
+=>PYTHONTEX#py#default#default#99#i#####523#
 c
-=>PYTHONTEX#py#default#default#100#i#####524#
+=>PYTHONTEX#py#default#default#100#i#####523#
 d
-=>PYTHONTEX#py#default#default#101#i#####524#
+=>PYTHONTEX#py#default#default#101#i#####523#
 i
-=>PYTHONTEX#py#default#default#102#i#####524#
+=>PYTHONTEX#py#default#default#102#i#####523#
 e
-=>PYTHONTEX#py#default#default#103#i#####524#
+=>PYTHONTEX#py#default#default#103#i#####523#
 f
-=>PYTHONTEX#py#default#default#104#i#####524#
+=>PYTHONTEX#py#default#default#104#i#####523#
 j
-=>PYTHONTEX#py#default#default#105#i#####524#
+=>PYTHONTEX#py#default#default#105#i#####523#
 g
-=>PYTHONTEX#py#default#default#106#code#####543#
+=>PYTHONTEX#py#default#default#106#code#####542#
 from random import choice, randint
 a = randint(2,5)
 b = randint(2,5)
@@ -304,71 +303,208 @@ d = randint(5,10)
 e = choice(['+','-'])
 f = choice(['+','-'])
 g = choice(['+','-'])
-=>PYTHONTEX#py#default#default#107#i#####567#
+=>PYTHONTEX#py#default#default#107#i#####566#
 a
-=>PYTHONTEX#py#default#default#108#i#####567#
+=>PYTHONTEX#py#default#default#108#i#####566#
 a
-=>PYTHONTEX#py#default#default#109#i#####567#
+=>PYTHONTEX#py#default#default#109#i#####566#
 e
-=>PYTHONTEX#py#default#default#110#i#####567#
+=>PYTHONTEX#py#default#default#110#i#####566#
 b
-=>PYTHONTEX#py#default#default#111#i#####567#
+=>PYTHONTEX#py#default#default#111#i#####566#
 b
-=>PYTHONTEX#py#default#default#112#i#####567#
+=>PYTHONTEX#py#default#default#112#i#####566#
 f
-=>PYTHONTEX#py#default#default#113#i#####567#
+=>PYTHONTEX#py#default#default#113#i#####566#
 c
-=>PYTHONTEX#py#default#default#114#i#####567#
+=>PYTHONTEX#py#default#default#114#i#####566#
 g
-=>PYTHONTEX#py#default#default#115#i#####567#
+=>PYTHONTEX#py#default#default#115#i#####566#
 d
-=>PYTHONTEX#py#default#default#116#code#####577#
+=>PYTHONTEX#py#default#default#116#code#####576#
 from random import choice, randint
 a = randint(2,4)
 b = randint(3,8)
 c = randint(3,8)
 d = choice(['+','-'])
 e = choice(['+','-'])
-=>PYTHONTEX#py#default#default#117#i#####599#
+=>PYTHONTEX#py#default#default#117#i#####598#
 c
-=>PYTHONTEX#py#default#default#118#i#####599#
+=>PYTHONTEX#py#default#default#118#i#####598#
 e
-=>PYTHONTEX#py#default#default#119#i#####599#
+=>PYTHONTEX#py#default#default#119#i#####598#
 d
-=>PYTHONTEX#py#default#default#120#i#####599#
+=>PYTHONTEX#py#default#default#120#i#####598#
 b
-=>PYTHONTEX#py#default#default#121#i#####599#
+=>PYTHONTEX#py#default#default#121#i#####598#
 a
-=>PYTHONTEX#py#default#default#122#code#####608#
+=>PYTHONTEX#py#default#default#122#code#####607#
 from random import choice, randint
 a = randint(2,5)
 b = randint(2,5)
 c = randint(3,8)
 d = choice(['+','-'])
 e = choice(['+','-'])
-=>PYTHONTEX#py#default#default#123#i#####630#
+=>PYTHONTEX#py#default#default#123#i#####629#
 a
-=>PYTHONTEX#py#default#default#124#i#####630#
+=>PYTHONTEX#py#default#default#124#i#####629#
 a
-=>PYTHONTEX#py#default#default#125#code#####648#
+=>PYTHONTEX#py#default#default#125#code#####647#
 from random import choice, randint
 a = randint(2,5)
 b = randint(2,5)
-=>PYTHONTEX#py#default#default#126#i#####658#
+=>PYTHONTEX#py#default#default#126#i#####657#
 a
-=>PYTHONTEX#py#default#default#127#i#####658#
+=>PYTHONTEX#py#default#default#127#i#####657#
 b
-=>PYTHONTEX#py#default#default#128#i#####658#
+=>PYTHONTEX#py#default#default#128#i#####657#
 b
-=>PYTHONTEX#py#default#default#129#i#####658#
+=>PYTHONTEX#py#default#default#129#i#####657#
 b
-=>PYTHONTEX#py#default#default#130#i#####658#
+=>PYTHONTEX#py#default#default#130#i#####657#
 b
-=>PYTHONTEX#py#default#default#131#code#####677#
+=>PYTHONTEX#py#default#default#131#code#####676#
 from random import choice, randint
 a = randint(2,5)
-=>PYTHONTEX#py#default#default#132#i#####686#
+=>PYTHONTEX#py#default#default#132#i#####685#
 a
+=>PYTHONTEX#py#default#default#133#code#####702#
+from random import choice, randint
+a = randint(5,9)
+b = randint(5,9)
+c = randint(2,5)
+d = randint(2,5)
+=>PYTHONTEX#py#default#default#134#i#####714#
+a**2
+=>PYTHONTEX#py#default#default#135#i#####714#
+b
+=>PYTHONTEX#py#default#default#136#i#####714#
+c
+=>PYTHONTEX#py#default#default#137#i#####714#
+d
+=>PYTHONTEX#py#default#default#138#i#####714#
+d
+=>PYTHONTEX#py#default#default#139#code#####730#
+from random import choice, randint
+a = randint(3,5)
+b = randint(1,3)
+c = randint(1,5)
+d = randint(1,5)
+e = randint(1,5)
+f = randint(1,5)
+g = choice(['+','-'])
+h = choice(['+','-'])
+=>PYTHONTEX#py#default#default#140#i#####746#
+a
+=>PYTHONTEX#py#default#default#141#i#####746#
+b
+=>PYTHONTEX#py#default#default#142#i#####746#
+c
+=>PYTHONTEX#py#default#default#143#i#####746#
+f
+=>PYTHONTEX#py#default#default#144#i#####746#
+g
+=>PYTHONTEX#py#default#default#145#i#####746#
+d
+=>PYTHONTEX#py#default#default#146#i#####746#
+f-1
+=>PYTHONTEX#py#default#default#147#i#####746#
+h
+=>PYTHONTEX#py#default#default#148#i#####746#
+e
+=>PYTHONTEX#py#default#default#149#i#####746#
+f-1
+=>PYTHONTEX#py#default#default#150#code#####762#
+from random import choice, randint
+a = randint(1,4)
+=>PYTHONTEX#py#default#default#151#i#####771#
+a
+=>PYTHONTEX#py#default#default#152#i#####771#
+a-1
+=>PYTHONTEX#py#default#default#153#i#####771#
+a
+=>PYTHONTEX#py#default#default#154#i#####771#
+a-1
+=>PYTHONTEX#py#default#default#155#code#####785#
+from random import choice, randint
+a = randint(1,5)
+=>PYTHONTEX#py#default#default#156#i#####793#
+a
+=>PYTHONTEX#py#default#default#157#i#####793#
+a/2
+=>PYTHONTEX#py#default#default#158#i#####793#
+a/2
+=>PYTHONTEX#py#default#default#159#code#####808#
+from random import choice, randint
+a = randint(1,5)
+b = randint(1,5)
+c = randint(1,5)
+d = randint(1,5)
+e = randint(1,5)
+=>PYTHONTEX#py#default#default#160#i#####819#
+a
+=>PYTHONTEX#py#default#default#161#i#####819#
+b
+=>PYTHONTEX#py#default#default#162#i#####819#
+c
+=>PYTHONTEX#py#default#default#163#i#####819#
+d
+=>PYTHONTEX#py#default#default#164#i#####819#
+e
+=>PYTHONTEX#py#default#default#165#code#####833#
+from random import choice, randint
+a = randint(2,5)
+b = randint(2,5)
+=>PYTHONTEX#py#default#default#166#i#####852#
+a
+=>PYTHONTEX#py#default#default#167#i#####852#
+b
+=>PYTHONTEX#py#default#default#168#code#####870#
+from random import choice, randint
+a = randint(3,5)
+b = randint(1,3)
+c = randint(3,5)
+d = randint(1,3)
+e = randint(1,5)
+f = choice(['','-'])
+g = choice(['+','-'])
+h = choice(['','-'])
+i = choice(['+','-'])
+=>PYTHONTEX#py#default#default#169#i#####884#
+f
+=>PYTHONTEX#py#default#default#170#i#####884#
+a
+=>PYTHONTEX#py#default#default#171#i#####884#
+c
+=>PYTHONTEX#py#default#default#172#i#####884#
+g
+=>PYTHONTEX#py#default#default#173#i#####884#
+b
+=>PYTHONTEX#py#default#default#174#i#####884#
+h
+=>PYTHONTEX#py#default#default#175#i#####884#
+d
+=>PYTHONTEX#py#default#default#176#i#####884#
+i
+=>PYTHONTEX#py#default#default#177#i#####884#
+e
+=>PYTHONTEX#py#default#default#178#code#####913#
+from random import choice, randint
+a = randint(2,5)
+b = randint(2,4)
+=>PYTHONTEX#py#default#default#179#i#####924#
+a
+=>PYTHONTEX#py#default#default#180#i#####924#
+b
+=>PYTHONTEX#py#default#default#181#i#####924#
+b
+=>PYTHONTEX#py#default#default#182#code#####944#
+from random import choice, randint
+a = randint(2,5)
+b = randint(2,4)
+c = choice(['\sin','\cos','\ttan'])
+=>PYTHONTEX#py#default#default#183#i#####956#
+c
 =>PYTHONTEX:SETTINGS#
 version=0.17dev
 outputdir=pythontex-files-math4ingenieure

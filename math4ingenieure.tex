@@ -3,8 +3,8 @@
 %\usepackage{fancyheadings}
 \usepackage[ngerman,german]{babel}
 \usepackage{german}
-%\usepackage[utf8]{inputenc}
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[latin1]{inputenc}
 \usepackage[active]{srcltx}
 \usepackage{algorithm}
 \usepackage[noend]{algorithmic}
@@ -425,7 +425,6 @@ Bestimmen Sie bitte das Symmetrieverhalten und den maximalen Definitionsbereich 
 from random import choice, randint
 a = randint(1,5)
 b = randint(1,5)
-c = choice([2,3,5])
 \end{pycode}
 
 \Aufgabe{11}
@@ -683,7 +682,7 @@ a = randint(2,5)
 Berechnen Sie bitte die folgenden Integrale mit \textit{partieller Integration}
 \begin{multicols}{2}
 	\begin{enumerate}[a)]
-		\item $\int  x^\py{a} ln(x)dx$
+		\item $\int  x^{\py{a}} ln(x)dx$
 		%\item $\int  x^3 ln(x)dx$
 		\ifnum\MitLoesungen=1 
 		\newline Richtige Antwort: \boxed{???}.
@@ -697,11 +696,26 @@ Berechnen Sie bitte die folgenden Integrale mit \textit{partieller Integration}
 \textbf{Tipps:}\\
 b) 2x partiell integrieren; d) 2x partiell integrieren und Gleichung umstellen
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 19
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(5,9)
+b = randint(5,9)
+c = randint(2,5)
+d = randint(2,5)
+\end{pycode}
+
 \Aufgabe{19}
 Berechnen Sie bitte die folgenden Integrale mit geeigneter \textit{Substitution}
 \begin{multicols}{2}
 	\begin{enumerate}[a)]
-		\item $\int  56x (7x^2-3)^3  dx$
+		\item $\int  \py{a**2}x (\py{b}x^{\py{c}}-\py{d})^{\py{d}}  dx$
+		%\item $\int  56x (7x^2-3)^3  dx$
+		\ifnum\MitLoesungen=1 
+		\newline Richtige Antwort: \boxed{???}.
+		\fi 
 		\item $\int  \frac{8x^2}{(x^3+2)^3} dx$
 		\item $\int  x\sqrt{1-2x^2} dx$
 		\item $\int  \frac{x}{x^2+1} dx$
@@ -710,11 +724,30 @@ Berechnen Sie bitte die folgenden Integrale mit geeigneter \textit{Substitution}
 	\end{enumerate}
 \end{multicols}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 20
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(3,5)
+b = randint(1,3)
+c = randint(1,5)
+d = randint(1,5)
+e = randint(1,5)
+f = randint(1,5)
+g = choice(['+','-'])
+h = choice(['+','-'])
+\end{pycode}
+
 \Aufgabe{20}
 Berechnen Sie bitte die folgenden \textit{bestimmten} Integrale
 \begin{multicols}{2}
 	\begin{enumerate}[a)]
-		\item $\int^{2}_{1}  \frac{x^3+5x^2-4}{x^2}  dx$
+		\item $\int^{\py{a}}_{\py{b}}  \frac{\py{c}x^{\py{f}} \py{g} \py{d}x^{\py{f-1}} \py{h} \py{e}}{x^{\py{f-1}}}  dx$
+		%\item $\int^{2}_{1}  \frac{x^3+5x^2-4}{x^2}  dx$
+		\ifnum\MitLoesungen=1 
+		\newline Richtige Antwort: \boxed{???}.
+		\fi
 		\item $\int^{1}_{0}  (1-x)\sqrt{x} dx$
 		\item $\int^{2\pi}_{0} (sin(\frac{\pi}{2})-e^{3x}) dx$
 	\end{enumerate}
@@ -723,24 +756,45 @@ Berechnen Sie bitte die folgenden \textit{bestimmten} Integrale
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Funktionn Mehreren Variabeln: Ableitung/Integral
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 21
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(1,4)
+\end{pycode}
+
 \Aufgabe{21}
 Berechnen Sie bitte die folgenden \textit{Mehrfachintegrale}:
 \begin{multicols}{2}
 	\begin{enumerate}[a)]
-		\item $\int^{1}_{0} \int^{1-x}_{0} (x+y) dy dx$
+		\item $\int^{\py{a}}_{\py{a-1}} \int^{\py{a}-x}_{\py{a-1}} (x+y) dy dx$
+		%\item $\int^{1}_{0} \int^{1-x}_{0} (x+y) dy dx$
+		\ifnum\MitLoesungen=1 
+		\newline Richtige Antwort: \boxed{???}.
+		\fi
 		\item $\int^{1}_{0} \int^{x^2}_{0} 2x e^y dy dx$
 		\item $\int^{2\pi}_{0} \int^{1}_{0} x e^{x^2}dx dy$
-		\item $\int^{2}_{1} \int^{2}_{1} \sqrt{1+x+y} dy dx$
-		
-		
+		\item $\int^{2}_{1} \int^{2}_{1} \sqrt{1+x+y} dy dx$	
 	\end{enumerate}
 \end{multicols}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 22
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(1,5)
+\end{pycode}
 
 \Aufgabe{22}
 \begin{enumerate}[a)]
 	
-	\item Ein Rechteck in der x-y-Ebene ist durch  die Ungleichungen $0\leq x \leq 2$ und $0 \leq y \leq 1$ begrenzt. Berechne das Volumen des Körpers, der über dem Rechteck und unter der Funktion $z= 1 +xy$ liegt. %Lösung=3
+	\item Ein Rechteck in der x-y-Ebene ist durch  die Ungleichungen $0\leq x \leq \py{a}$ und $0 \leq y \leq \py{a/2}$ begrenzt. Berechne das Volumen des Körpers, der über dem Rechteck und unter der Funktion $z= \py{a/2} +xy$ liegt. 
+	%\item Ein Rechteck in der x-y-Ebene ist durch  die Ungleichungen $0\leq x \leq 2$ und $0 \leq y \leq 1$ begrenzt. Berechne das Volumen des Körpers, der über dem Rechteck und unter der Funktion $z= 1 +xy$ liegt. %Lösung=3
+	\ifnum\MitLoesungen=1 
+		\newline Richtige Antwort: \boxed{???}.
+	\fi
 	\item Berechnen Sie bitte die Fläche, die von der Geraden $y=x$ und der Parabel $y=x^2-2x$ eingeschlossen wird. %Lösung = 9/2
 	\item Berechnen Sie bitte die von den Kurven $y^2=2-x$ und $y=x$ eingeschlossene Fläche mit Hilfe eines Doppelintegrals.
 	\item Berechnen Sie bitte das Volumen des Körpers, der von den Koordinatenebenen
@@ -748,25 +802,54 @@ Berechnen Sie bitte die folgenden \textit{Mehrfachintegrale}:
 	
 \end{enumerate}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 23
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(1,5)
+b = randint(1,5)
+c = randint(1,5)
+d = randint(1,5)
+e = randint(1,5)
+\end{pycode}
 
 \Aufgabe{23}
 \begin{enumerate}[a)]
-	
-	\item Wo liegt der Schwerpunkt der von den Funktionen $f (x) = x^2 + 2x + 1$ und $g(x) = 3x + 1$ eingeschlossenen Fläche?
+	\item Wo liegt der Schwerpunkt der von den Funktionen $f (x) = \py{a}x^2 + \py{b}x + \py{c}$ und $g(x) = \py{d}x + \py{e}$ eingeschlossenen Fläche?
+	%\item Wo liegt der Schwerpunkt der von den Funktionen $f (x) = x^2 + 2x + 1$ und $g(x) = 3x + 1$ eingeschlossenen Fläche?
+	\ifnum\MitLoesungen=1 
+		\newline Richtige Antwort: \boxed{???}.
+	\fi
 	\item Berechnen Sie bitte den Schwerpunkt der von den Kurven $f(x)=ln(x)$,$g(x)=0.1x-0.1$ und $x = 5$ begrenzten Fläche.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %Komplexe Zahlen
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 24
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(2,5)
+b = randint(2,5)
+\end{pycode}
+
 \Aufgabe{24}
 Geben Sie die bitte die trigonometrische und kartesische Form der folgenden komplexen Zahlen an
 \setcounter{subenum}{0}
 \vspace{0,2cm}\\
 \setstretch{2}
 \newitem{$\begin{aligned}[t]
-	3\sqrt{2}e^{i\frac{\pi}{4}}
-	\end{aligned}$ }
+	\py{a}\sqrt{2}e^{i\frac{\pi}{\py{b}}}
+	%3\sqrt{2}e^{i\frac{\pi}{4}}
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline }
 \newitem{$\begin{aligned}[t]
 	2e^{i\frac{2\pi}{3}}
 	\end{aligned}$ }
@@ -781,14 +864,35 @@ Geben Sie die bitte die trigonometrische und kartesische Form der folgenden komp
 	\end{aligned}$ }
 \setstretch{1}\\  
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 25
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(3,5)
+b = randint(1,3)
+c = randint(3,5)
+d = randint(1,3)
+e = randint(1,5)
+f = choice(['','-'])
+g = choice(['+','-'])
+h = choice(['','-'])
+i = choice(['+','-'])
+\end{pycode}
+
 \Aufgabe{25}
-Es seien $z_1 = -4i, z_2 = 3-2i$ und $z_3 = -1+i$. Berechnen Sie bitte die folgenden Ausdrücke
+Es seien $z_1 = \py{f}\py{a}i, z_2 = \py{c}\py{g}\py{b}i$ und $z_3 = \py{h}\py{d}\py{i}\py{e}i$. Berechnen Sie bitte die folgenden Ausdrücke
 \setcounter{subenum}{0}
 \vspace{0,2cm}\\
 \setstretch{2}
 \newitem{$\begin{aligned}[t]
 	z_1 - 2z_2 + 3z_3
-	\end{aligned}$ }
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline }
 \newitem{$\begin{aligned}[t]
 	2z_1 \cdot \bar{z}_2
 	\end{aligned}$ }
@@ -803,14 +907,28 @@ Es seien $z_1 = -4i, z_2 = 3-2i$ und $z_3 = -1+i$. Berechnen Sie bitte die folge
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%DGL
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 26
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(2,5)
+b = randint(2,4)
+\end{pycode}
 
 \Aufgabe{26}
 Lösen Sie bitte die folgenden Differentialgleichungen durch Trennung der Variablen.
 \begin{multicols}{2}
 	\begin{enumerate}[(a)]
 		\item $\begin{aligned}[t]
-		2x^2y' = y^2
+		\py{a}x^{\py{b}}y' = y^{\py{b}}
+		%2x^2y' = y^2
 		\end{aligned}$ 
+		\newline
+		\ifnum\MitLoesungen=1 
+			Richtige Antwort: \boxed{???}.
+		\fi 
+		\newline
 		\item $\begin{aligned}[t]
 		y' = (y+2)^2
 		\end{aligned}$ 
@@ -820,13 +938,29 @@ Lösen Sie bitte die folgenden Differentialgleichungen durch Trennung der Variab
 	\end{enumerate}
 \end{multicols}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 27
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(2,5)
+b = randint(2,4)
+c = choice(['\sin','\cos','\ttan'])
+\end{pycode}
+
 \Aufgabe{27}
 Lösen Sie bitte die folgenden Anfangswertprobleme.
 \begin{multicols}{2}
 	\begin{enumerate}[a)]
 		\item $\begin{aligned}[t]
-		y' + y\sin(x) = 0 \quad , y(\pi) = \frac{1}{e}
+		y' + y\py{c}(x) = 0 \quad , y(\pi) = \frac{1}{e}
+		%y' + y\sin(x) = 0 \quad , y(\pi) = \frac{1}{e}
 		\end{aligned}$ 
+		\newline
+		\ifnum\MitLoesungen=1 
+			Richtige Antwort: \boxed{???}.
+		\fi 
+		\newline
 		\item $\begin{aligned}[t]
 		y' + \frac{y}{x} = \frac{\ln(x)}{x} \quad  , y(1) = 1
 		\end{aligned}$ 
