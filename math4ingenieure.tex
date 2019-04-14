@@ -1,0 +1,844 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{fancyhdr}
+%\usepackage{fancyheadings}
+\usepackage[ngerman,german]{babel}
+\usepackage{german}
+%\usepackage[utf8]{inputenc}
+\usepackage[latin1]{inputenc}
+\usepackage[active]{srcltx}
+\usepackage{algorithm}
+\usepackage[noend]{algorithmic}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage{enumerate}
+\usepackage{graphicx}
+\usepackage{ifthen}
+\usepackage{listings}
+\usepackage{struktex}
+\usepackage{hyperref}
+\usepackage[shortlabels]{enumitem}
+\usepackage{pythontex}
+\usepackage{mathtools}
+
+\usepackage{enumitem,multicol,setspace}% http://ctan.org/pkg/{enumitem,multicol,setspace}
+\newcounter{subenum}[enumi]
+\renewcommand{\thesubenum}{\alph{subenum}}
+\newcommand{\newitem}[1]{%
+  \refstepcounter{subenum}%
+  \parbox{\dimexpr.5\linewidth-.5\columnsep}{%
+    \makebox[\labelwidth][r]{(\thesubenum)\hspace*{\labelsep}}%
+    #1}\hfill%
+}
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+	{
+		\vspace*{0.5cm}
+		\textsf{\textbf{Aufgabe #1}}
+		\vspace*{0.2cm}
+		
+	}
+}
+%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%
+%% Lösungen Einblenden COMMAND
+\newcount\MitLoesungen % Hilfsvariable um  einzustellen ob Lösungen mitgedruckt werden
+\MitLoesungen=1 % 1 - Lösungen werden mitgedruckt 0 - nicht
+%%%%%%%%%%%%%%%%%%%%%%
+
+\pagenumbering{gobble}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{Mathematik I für Bachelor Maschinenbau}
+\newcommand{\Name}{Felix Frank, Tobias Czernek}
+\newcommand{\Hochschule}{Hochschule Darmstadt}
+%\newcommand{\Matrikelnummer}{1}
+\newcommand{\Semester}{Sommersemester 2019}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%Elementare Umformungen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+	\thispagestyle{fancy}
+	\lhead{\sf \large \Fach{} \vspace{0,1cm}\\ \small \Name{}}% - \Matrikelnummer{}}
+	\rhead{\sf \Hochschule{} \\ \Semester{}}
+	\vspace*{0.2cm}
+	\begin{center}
+		\LARGE \sf \textbf{Tutoriumsaufgaben }
+	\end{center}
+	\vspace*{0.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	Version hochsetzen um Pythonwerte neu zu kompilieren
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+version = 5
+\end{pycode}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = choice([2,3,5])
+b = randint(1,3)
+c = randint(1,3)
+d = randint(2,3)
+e = randint(2,5)
+f = randint(2,5)
+g = randint(3,5)
+h = randint(3,5)
+i = randint(3,5)
+j = randint(4,5)
+\end{pycode}
+
+\Aufgabe{1}
+Vereinfachen Sie die bitte die folgenden Terme
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	\frac{(\py{a**b}^{\py{e}})^{\py{h}} \cdot (\py{a**c}^{\py{f}})^{\py{i}}}{(\py{a**d}^{\py{g}})^{\py{j}}}
+	%\frac{(12^2)^4 \cdot (8^4)^3}{(4^4)^6}
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{\py{a**b}}.
+	\fi 
+	\newline }
+\newitem{$\begin{aligned}[t]
+	(\frac{4a^{-2}x}{3a^5x^{-3}})^2 : \frac{(3a^4x^2)^{-3}}{(2ax^{-3})^{-2}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	\frac{3-a}{a^{m-4}} + \frac{a^6 - a^5 + 2a^3 - 1}{a^{m+1}} - \frac{2a^2+1}{a^{m-2}}
+	\end{aligned}$ }
+\setstretch{1}\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+import math
+a = choice([2,3,4,5])
+b = randint(0,5)
+c = randint(0,5)
+x = math.log((a**b)/(a**c), a)
+\end{pycode}
+
+\Aufgabe{2}
+Bestimmen Sie bitte $x$ ohne Hilfsmittel:
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	x = \log_{\py{a}}{\frac{\py{a**b}}{\py{a**c}}}
+	%x = \log_2{\frac{1}{8}}
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{\pyc{print(int(x))}}.
+	\fi 
+	\newline }
+\newitem{$\begin{aligned}[t]
+	\log_x{\sqrt{8}} = \frac{3}{4}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	x = 81^{0,5 \cdot \log_3{7}}
+	\end{aligned}$ } 
+\newitem{$\begin{aligned}[t]
+	x = 2\cdot10^{2\cdot \log_{10}{2}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	x = \sqrt[3]{10^{\frac{1}{2}(\log_{10}{2}+\log_{10}{32})}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	x = \sqrt{10^{\log_{10}{16}}}
+	\end{aligned}$ }
+\setstretch{1}\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+import math
+from sympy.solvers.inequalities import reduce_inequalities
+from sympy import Symbol, sin, Interval, S
+x = Symbol('x')
+a = choice([2,3,4,5])
+b = randint(3,5)
+c = randint(1,2)
+y = reduce_inequalities((a*x-b)/a > (a*x-c)/b, x)
+\end{pycode}
+
+\Aufgabe{3}
+Bestimmen Sie bitte die Lösungsmengen der folgenden Ungleichungen
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	\frac{\py{a}x-\py{b}}{\py{a}} < \frac{\py{a}x-\py{c}}{-\py{b}}
+	%\frac{2x-3}{2} < \frac{2x-1}{-3}
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{\py{y}}.
+	\fi 
+	\newline }
+\newitem{$\begin{aligned}[t]
+	\frac{2x-1}{2} \leq x+1
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	\left| 2x-3 \right| \leq 6
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	-x^2 + \left| 2x+4 \right| \geq 1
+	\end{aligned}$ }
+\setstretch{1}\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Vektoren
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+import math
+from numpy import array
+a = randint(1,3)
+b = randint(1,3)
+c = randint(4,6)
+d = randint(4,6)
+x = array([c,a])
+y = array([b,d])
+z = 2*x-y
+\end{pycode}
+
+\Aufgabe{4}
+%Gegeben seien die Vektoren $\vec{a} = (2,1)^T$ und $\vec{b} = (1,3)^T$. Berechnen Sie bitte $2\vec{a}-\vec{b}$ rechnerisch und zeichnerisch.
+Gegeben seien die Vektoren $\vec{a} = (\py{c},\py{a})^T$ und $\vec{b} = (\py{b},\py{d})^T$. Berechnen Sie bitte $2\vec{a}-\vec{b}$ rechnerisch und zeichnerisch.
+\newline
+\ifnum\MitLoesungen=1 
+Richtige Antwort: \boxed{\begin{pmatrix} \py{z[0]} \\ \py{z[1]} \end{pmatrix}}.
+\fi 
+\newline
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+import math
+from numpy import array
+a = randint(1,3)
+b = randint(1,3)
+c = randint(4,6)
+d = randint(4,6)
+y = array([b,d])
+\end{pycode}
+
+\Aufgabe{5}
+Untersuchen Sie bitte die folgenden Vektoren auf lineare Abhängigkeit
+\begin{enumerate}[(a)]
+	\item $\begin{aligned}[t]
+	\vec{a} = (\py{a},\py{a},\py{a})^T,\vec{b} = (\py{a+1},\py{b+1},\py{a+1})^T,\vec{c} = (\py{c},\py{d},\py{c})^T
+	%\vec{a} = (1,1,1)^T,\vec{b} = (1,2,1)^T,\vec{c} = (3,5,3)^T	
+	\end{aligned}$
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline
+	\item $\begin{aligned}[t]
+	\vec{a} = (1,0,1)^T,\vec{b} = (1,2,0)^T,\vec{c} = (0,5,3)^T
+	\end{aligned}$
+\end{enumerate}
+
+\Aufgabe{6}
+\begin{enumerate}
+	\item Bestimmen Sie bitte alle Vektoren vom Betrag 3, die auf dem Vektor $\vec{a} = (-4,3)^T$ senkrecht stehen.
+	\item Der Vektor $\vec{a} = (-3,2,-4)^T$ wird auf den Vektor $\vec{b} = (1,1,1)^T$ orthogonal projiziert. Welche Länge hat dann seine Projektion? 
+	\item Gegeben seien die Vektoren $\vec{a} = (2,y,z)^T, \vec{b} = (-1,4,2)^T$ und $\vec{c} = (3,-3,-1)^T$. Bestimmen Sie bitte $y$ und $z$ so, dass der Vektor $\vec{a}$ auf $\vec{b}$ und $\vec{c}$ senkrecht steht. Welchen Betrag hat $\vec{a}$, und welchen Winkel bildet er mit den Vektoren $\vec{b}+\vec{c}$ und $\vec{a}+\vec{b}+\vec{c}$?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Matritzen und LGS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+import math
+from numpy import array
+a = randint(1,3)
+b = randint(1,3)
+c = randint(1,3)
+d = randint(1,3)
+e = randint(4,6)
+f = randint(4,6)
+g = randint(4,6)
+h = randint(4,6)
+x = array([[ e, a ,b], [ f, c ,d]])
+y = array([[ a, g ,b], [ c, d ,h], [ e, a ,a]])
+z = x.dot(y)
+\end{pycode}
+
+\Aufgabe{7}
+Berechnen Sie bitte das Matrizenprodukt $C = AB$ der folgenden Matrizen:
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	A = \begin{pmatrix} \py{e} &\py{a} &\py{b}\\\py{f} &\py{c} &\py{d} \end{pmatrix}, B = \begin{pmatrix} \py{a} &\py{g} &\py{b}\\\py{c} &\py{d} &\py{h}\\\py{e} &\py{a} & \py{a} \end{pmatrix}
+	%A = \begin{pmatrix} 5 &2 &1\\3 &0 &1 \end{pmatrix}, B = \begin{pmatrix} 1 &3 &0\\1 &1 &4\\2 &0 & 0 \end{pmatrix}
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{\begin{pmatrix} \py{z[0][0]} & \py{z[0][1]} & \py{z[0][2]} \\ \py{z[1][0]} & \py{z[1][1]} & \py{z[1][2]} \end{pmatrix}}
+	\fi 
+	\newline } \\
+\newitem{$\begin{aligned}[t]
+	A = \begin{pmatrix} 5 &2 &1 \end{pmatrix}, B = \begin{pmatrix} 1\\3\\2 \end{pmatrix}
+	\end{aligned}$ } \\
+\setstretch{1}\\ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+from sympy import *
+import math
+import numpy as np
+a = randint(1,3)
+b = randint(1,3)
+c = randint(4,6)
+d = randint(4,6)
+x = np.array([[ a, c],[ d, b]])
+y = np.array([[ b, -c],[ -d, a]])
+detx = np.linalg.det(x)
+if detx != 0:
+	test = "regulary"
+else:
+	test = "singulary"
+\end{pycode}
+
+\Aufgabe{8}
+Bestimmen Sie bitte die Inversen der folgenden Matrizen:
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	A = \begin{pmatrix} \py{a} & \py{c} \\ \py{d} & \py{b} \end{pmatrix}
+	%A = \begin{pmatrix} 1 &3\\2 &1 \end{pmatrix}
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	\ifthenelse{\equal{singulary}{\py{test}}}{Richtige Antwort: \boxed{Die Matrix ist singulär}}{Richtige Antwort: \boxed{\begin{pmatrix} \py{y[0][0]} & \py{y[0][1]} \\ \py{y[1][0]} & \py{y[1][1]} \end{pmatrix}}}
+	\fi 
+	\newline }
+\setstretch{1}\\ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(1,3)
+b = choice([2,3,4,5])
+\end{pycode}
+
+\Aufgabe{9}
+Beurteilen Sie bitte anhand des freien Parameters $a \in \mathbb{R}$ die L\"osbarkeit des linearen Gleichungssystems $A\vec{x} = \vec{b}$.
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	A = \begin{pmatrix} a-\py{b} &\py{a} &\py{a}\\\py{a} &a-\py{b} &\py{a}\\\py{a} &\py{a} &a-\py{b} \end{pmatrix}, \vec{b} = \begin{pmatrix} \py{a}\\\py{a}\\\py{a} \end{pmatrix}
+	%A = \begin{pmatrix} a-2 &1 &1\\1 &a-2 &1\\1 &1 &a-2 \end{pmatrix}, \vec{b} = \begin{pmatrix} 1\\1\\1 \end{pmatrix}
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline } \\
+\setstretch{1}\\ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Funktionen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(2,5)
+b = choice([2,3,5])
+\end{pycode}
+
+\Aufgabe{10}
+Bestimmen Sie bitte das Symmetrieverhalten und den maximalen Definitionsbereich $D(f)$ der folgenden Funktionen
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	f(x) = \py{a} x^2 - \py{a*a}
+	%f(x) = 4x^2- 16
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline }
+\newitem{$\begin{aligned}[t]
+	f(x) = \frac{x^3}{x^2+1}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	f(x) = \sin(x)\cos(x)
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	f(x) = \sqrt{x^2 - 25}
+	\end{aligned}$ }
+\setstretch{1}\\ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 11
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(1,5)
+b = randint(1,5)
+c = choice([2,3,5])
+\end{pycode}
+
+\Aufgabe{11}
+Berechnen Sie von den folgenden Funktionen die Umkehrfunktion $f^{-1}$
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	f(x) = \frac{\py{a}}{\py{2*a}x} \text{ mit } x > 0
+	%f(x) = \frac{1}{2x} \text{ mit } x > 0
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline }
+\newitem{$\begin{aligned}[t]
+	f(x) = \sqrt{3x} \text{ mit } x > 0
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	f(x) = 2e^{x-0,5}
+	\end{aligned}$ }
+\setstretch{1}\\ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Ableitung
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 12
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice
+c = choice(['\sin','\cos','\ttan'])
+d = choice(['+1','-1',''])
+\end{pycode}
+
+\Aufgabe{12}
+Berechnen Sie bitte den Grenzwert der folgenden Funktionen
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	\lim_{x\rightarrow \pm \infty }{\frac {x\cdot {\py{c}{\left({x}\right)}}}{{x}^{{2}}\py{d}}}
+	%\lim_{x\rightarrow \pm \infty }{\frac {x\cdot {\sin{\left({x}\right)}}}{{x}^{{2}}+1}}
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline }
+\newitem{$\begin{aligned}[t]
+	\lim_{x\rightarrow \infty }{\frac {x+1}{x-1}}\cdot \frac {{x}^{{n}}-1}{{x}^{{n}}+1}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	\lim_{x\rightarrow \infty }{\sqrt{{x+1}}}-\sqrt{{x}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	\lim_{x\rightarrow -1}{\frac {\left({x+3}\right)\left({2x-1}\right)}{{x}^{{2}}+3x-2}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	\lim_{h\rightarrow 0}{\frac {{{\left({x+h}\right)}}^{{3}}-{x}^{{3}}}{h}}
+	\end{aligned}$ }
+\setstretch{1}\\ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 13
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(1,5)
+b = randint(1,5)
+c = randint(1,5)
+d = randint(1,5)
+e = randint(1,5)
+f = randint(1,5)
+g = randint(1,5)
+h = choice(['+','-'])
+i = choice(['+','-'])
+j = choice(['+','-'])
+\end{pycode}
+
+\Aufgabe{13}
+Berechnen Sie bitte die Ableitung der Funktion $f(x)$
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	f\left({x}\right)=\py{a}{x}^{\py{b}} \py{h} \py{c}{x}^{\py{d}} \py{i} \py{e}{x}^{\py{f}} \py{j} \py{g}
+	%f\left({x}\right)=3{x}^{{4}}-{x}^{{3}}+2{x}^{{2}}-5
+	\end{aligned}$
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline }
+\newitem{$\begin{aligned}[t]
+	f\left({x}\right)=2+\frac {3}{{x}^{{4}}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	f\left({x}\right)=\frac {x+8}{x-8}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	f\left({x}\right)={\ln{\left({\frac {{x}^{{4}}}{{{\left({3x-4}\right)}}^{{2}}}}\right)}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	f\left({x}\right)=\sqrt{{{x}^{{2}}+6x+3}}
+	\end{aligned}$ }
+\setstretch{1}\\ 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 14
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(2,5)
+b = randint(2,5)
+c = randint(5,10)
+d = randint(5,10)
+e = choice(['+','-'])
+f = choice(['+','-'])
+g = choice(['+','-'])
+\end{pycode}
+
+\Aufgabe{14}
+Bestimmen Sie von der Funktion $f(x)$ bitte die Extremstellen
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	f(x) = \frac {1}{\py{a}}{x}^{{\py{a}}} \py{e} \frac {1}{\py{b}}{x}^{{\py{b}}} \py{f} \py{c}x \py{g} \py{d}
+	%f(x) = \frac {1}{3}{x}^{{3}}+\frac {1}{2}{x}^{{2}}-6x+8
+	\end{aligned}$
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline }
+\newitem{$\begin{aligned}[t]
+	f(x) = \frac {10}{x^2+1}
+	\end{aligned}$ }
+\setstretch{1}\\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 15
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(2,4)
+b = randint(3,8)
+c = randint(3,8)
+d = choice(['+','-'])
+e = choice(['+','-'])
+\end{pycode}
+
+\Aufgabe{15}
+Bestimmen Sie bitte von der Funktion $f(x)$ die Wendepunkte
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	f(x) = \py{c}x \py{e} (x \py{d} \py{b})^{\frac{1}{\py{a}}}
+	%f(x) = 5x - (x-4)^{\frac{1}{3}}
+	\end{aligned}$ 
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline }
+\newitem{$\begin{aligned}[t]
+	f(x) = (1-2x)^3
+	\end{aligned}$ }
+\setstretch{1}\\ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 16
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(2,5)
+b = randint(2,5)
+c = randint(3,8)
+d = choice(['+','-'])
+e = choice(['+','-'])
+\end{pycode}
+
+\Aufgabe{16}
+Berechnen Sie bitte die Grenzwerte folgender Funktionen mit Hilfe der Regel von L'Hospital
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	\lim_{x\rightarrow 1}{\frac {-\frac {1}{4}+x+\frac {1}{2}{x}^{\py{a}}\left({-\frac {3}{2}+{\ln{\left({x}\right)}}}\right)}{{{\left({x-1}\right)}}^{\py{a}}}}
+	%\lim_{x\rightarrow 1}{\frac {-\frac {1}{4}+x+\frac {1}{2}{x}^{{2}}\left({-\frac {3}{2}+{\ln{\left({x}\right)}}}\right)}{{{\left({x-1}\right)}}^{{3}}}}
+	\end{aligned}$
+	\newline
+	\ifnum\MitLoesungen=1 
+	Richtige Antwort: \boxed{???}.
+	\fi 
+	\newline }
+\newitem{$\begin{aligned}[t]
+	\lim_{x\rightarrow 0}{\frac {{e }^{{3x}}-1}{x}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	\lim_{x\rightarrow 1}{\frac {1-{\sin{\left({\frac {\pi }{2}x}\right)}}}{3{x}^{{2}}-6x+3}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	\lim_{x\rightarrow 0}{\frac {{e }^{{x}}+{e }^{{-x}}-2}{x-{\ln{\left({1+x}\right)}}}}
+	\end{aligned}$ }
+\setstretch{1}\\ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Integral
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 17
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(2,5)
+b = randint(2,5)
+\end{pycode}
+
+\Aufgabe{17}
+Lösen Sie folgende \textit{unbestimmte} Integrale:
+\begin{multicols}{2}
+	\begin{enumerate}[a)]
+		\item $\int  \sqrt[\py{a}]{x^\py{b}}dx$
+		%\item $\int  \sqrt[3]{x^2}dx$
+		\ifnum\MitLoesungen=1 
+		\newline Richtige Antwort: \boxed{???}.
+		\fi 
+		\item $\int  (2x^4+3x^2-4x+7)dx$
+		\item $\int  \sqrt{x \sqrt{x}}$
+		\item $\int  (cos(2x+5)- e^{-2x})dx$
+		
+		
+	\end{enumerate}
+\end{multicols}
+\textbf{Tipps:}\\
+a) - c) Potenzfunktionen, Summenregel\\
+d) Summenregel, inv. Kettenregel\\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%	AUFGABE 18
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{pycode}
+from random import choice, randint
+a = randint(2,5)
+\end{pycode}
+
+\Aufgabe{18}
+Berechnen Sie bitte die folgenden Integrale mit \textit{partieller Integration}
+\begin{multicols}{2}
+	\begin{enumerate}[a)]
+		\item $\int  x^\py{a} ln(x)dx$
+		%\item $\int  x^3 ln(x)dx$
+		\ifnum\MitLoesungen=1 
+		\newline Richtige Antwort: \boxed{???}.
+		\fi 
+		\item $\int  x^2 e^{2x}dx$
+		\item $\int  \frac{x}{\sqrt{x+1}} dx$
+		\item $\int  x^2 sin(ln(x))dx$
+		
+	\end{enumerate}
+\end{multicols}
+\textbf{Tipps:}\\
+b) 2x partiell integrieren; d) 2x partiell integrieren und Gleichung umstellen
+
+\Aufgabe{19}
+Berechnen Sie bitte die folgenden Integrale mit geeigneter \textit{Substitution}
+\begin{multicols}{2}
+	\begin{enumerate}[a)]
+		\item $\int  56x (7x^2-3)^3  dx$
+		\item $\int  \frac{8x^2}{(x^3+2)^3} dx$
+		\item $\int  x\sqrt{1-2x^2} dx$
+		\item $\int  \frac{x}{x^2+1} dx$
+		\item $\int  \frac{x^3}{x^4+1} dx$
+		\item $\int x^2  e^{x^3-2} dx$
+	\end{enumerate}
+\end{multicols}
+
+\Aufgabe{20}
+Berechnen Sie bitte die folgenden \textit{bestimmten} Integrale
+\begin{multicols}{2}
+	\begin{enumerate}[a)]
+		\item $\int^{2}_{1}  \frac{x^3+5x^2-4}{x^2}  dx$
+		\item $\int^{1}_{0}  (1-x)\sqrt{x} dx$
+		\item $\int^{2\pi}_{0} (sin(\frac{\pi}{2})-e^{3x}) dx$
+	\end{enumerate}
+\end{multicols}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Funktionn Mehreren Variabeln: Ableitung/Integral
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Aufgabe{21}
+Berechnen Sie bitte die folgenden \textit{Mehrfachintegrale}:
+\begin{multicols}{2}
+	\begin{enumerate}[a)]
+		\item $\int^{1}_{0} \int^{1-x}_{0} (x+y) dy dx$
+		\item $\int^{1}_{0} \int^{x^2}_{0} 2x e^y dy dx$
+		\item $\int^{2\pi}_{0} \int^{1}_{0} x e^{x^2}dx dy$
+		\item $\int^{2}_{1} \int^{2}_{1} \sqrt{1+x+y} dy dx$
+		
+		
+	\end{enumerate}
+\end{multicols}
+
+
+\Aufgabe{22}
+\begin{enumerate}[a)]
+	
+	\item Ein Rechteck in der x-y-Ebene ist durch  die Ungleichungen $0\leq x \leq 2$ und $0 \leq y \leq 1$ begrenzt. Berechne das Volumen des Körpers, der über dem Rechteck und unter der Funktion $z= 1 +xy$ liegt. %Lösung=3
+	\item Berechnen Sie bitte die Fläche, die von der Geraden $y=x$ und der Parabel $y=x^2-2x$ eingeschlossen wird. %Lösung = 9/2
+	\item Berechnen Sie bitte die von den Kurven $y^2=2-x$ und $y=x$ eingeschlossene Fläche mit Hilfe eines Doppelintegrals.
+	\item Berechnen Sie bitte das Volumen des Körpers, der von den Koordinatenebenen
+	und der Ebene $x+y+z=1$ begrenzt wird mit Hilfe eines Doppelintegrals.
+	
+\end{enumerate}
+
+
+\Aufgabe{23}
+\begin{enumerate}[a)]
+	
+	\item Wo liegt der Schwerpunkt der von den Funktionen $f (x) = x^2 + 2x + 1$ und $g(x) = 3x + 1$ eingeschlossenen Fläche?
+	\item Berechnen Sie bitte den Schwerpunkt der von den Kurven $f(x)=ln(x)$,$g(x)=0.1x-0.1$ und $x = 5$ begrenzten Fläche.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Komplexe Zahlen
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\Aufgabe{24}
+Geben Sie die bitte die trigonometrische und kartesische Form der folgenden komplexen Zahlen an
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	3\sqrt{2}e^{i\frac{\pi}{4}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	2e^{i\frac{2\pi}{3}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	e^{i\pi}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	4e^{i\frac{4\pi}{3}}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	5e^{i\frac{\pi}{2}}
+	\end{aligned}$ }
+\setstretch{1}\\  
+
+\Aufgabe{25}
+Es seien $z_1 = -4i, z_2 = 3-2i$ und $z_3 = -1+i$. Berechnen Sie bitte die folgenden Ausdrücke
+\setcounter{subenum}{0}
+\vspace{0,2cm}\\
+\setstretch{2}
+\newitem{$\begin{aligned}[t]
+	z_1 - 2z_2 + 3z_3
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	2z_1 \cdot \bar{z}_2
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	\frac{\bar{z}_1 \cdot \bar{z}_2}{z_3}
+	\end{aligned}$ }
+\newitem{$\begin{aligned}[t]
+	\frac{z_1-\bar{z}_2}{3\bar{z}_3}
+	\end{aligned}$ }
+\setstretch{1}\\  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%DGL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Aufgabe{26}
+Lösen Sie bitte die folgenden Differentialgleichungen durch Trennung der Variablen.
+\begin{multicols}{2}
+	\begin{enumerate}[(a)]
+		\item $\begin{aligned}[t]
+		2x^2y' = y^2
+		\end{aligned}$ 
+		\item $\begin{aligned}[t]
+		y' = (y+2)^2
+		\end{aligned}$ 
+		\item $\begin{aligned}[t]
+		y'(1+x^3) = 3x^2y
+		\end{aligned}$ 
+	\end{enumerate}
+\end{multicols}
+
+\Aufgabe{27}
+Lösen Sie bitte die folgenden Anfangswertprobleme.
+\begin{multicols}{2}
+	\begin{enumerate}[a)]
+		\item $\begin{aligned}[t]
+		y' + y\sin(x) = 0 \quad , y(\pi) = \frac{1}{e}
+		\end{aligned}$ 
+		\item $\begin{aligned}[t]
+		y' + \frac{y}{x} = \frac{\ln(x)}{x} \quad  , y(1) = 1
+		\end{aligned}$ 
+		\item $\begin{aligned}[t]
+		(x-1)(x+1)y' = y \quad  , y(2) = 1
+		\end{aligned}$ 
+		\item $\begin{aligned}[t]
+		y' = 3x^2y + e^{x^3}\cos(x) \quad  , y(0) = 2
+		\end{aligned}$ 
+		%    \item $\begin{aligned}[t]
+		%            y'(1+x^3) = 3x^2y
+		%        	\end{aligned}$   	
+	\end{enumerate}
+\end{multicols}
+\end{document}
